@@ -175,7 +175,7 @@
 	function deleteAjaxData(id){
   	  $.ajax({
   	   type: "post",
-  	   url: "deleteData",
+  	   url: "deleteEmp",
   	   dataType: "json",  
   	   data:{id: id },
   	   success: function(response){

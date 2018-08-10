@@ -27,7 +27,7 @@ public class CrudeService {
 
 
 	public List<employee> findAll() {
-		return crudeRepository.findAll();
+		return crudeRepository.findAllData();
 	}
 	
 
