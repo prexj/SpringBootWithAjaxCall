@@ -530,6 +530,8 @@ import com.example.entity.employee;
 @Transactional
 public interface CrudeRepository extends JpaRepository<employee, Integer>{
 
+	@Query("select em from employee em where em.dflag =1")
+	public List<employee> findAllData();
 	//public employee save(employee emp);
 
 	//public employee findById(int id);
@@ -569,7 +571,7 @@ public class CrudeService {
 
 
 	public List<employee> findAll() {
-		return crudeRepository.findAll();
+		return crudeRepository.findAllData();
 	}
 	
 
